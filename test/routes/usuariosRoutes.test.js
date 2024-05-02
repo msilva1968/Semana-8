@@ -12,7 +12,7 @@ afterEach(() => {
   server.close();
 });
 
-describe('GET em /editoras', () => {
+describe('GET em /usuarios', () => {
   it('Deve retornar uma lista de usuarios', async () => {
     const resposta = await request(app)
       .get('/usuarios')
