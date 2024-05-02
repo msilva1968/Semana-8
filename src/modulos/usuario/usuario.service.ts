@@ -34,8 +34,7 @@ export class UsuarioService {
       where: { email },
     });
 
-    if (validEmail === null)
-      throw new NotFoundException('e-Mail inexistente.');
+    if (validEmail === null) throw new NotFoundException('e-Mail inexistente.');
 
     return validEmail;
   }
@@ -43,8 +42,7 @@ export class UsuarioService {
   async atualizaUsuario(id: string, novosDados: AtualizaUsuarioDTO) {
     const usuario = await this.usuarioRepository.findOneBy({ id });
 
-    if (usuario === null)
-      throw new NotFoundException('Usuário inexistente.');
+    if (usuario === null) throw new NotFoundException('Usuário inexistente.');
 
     Object.assign(usuario, novosDados as UsuarioEntity);
 

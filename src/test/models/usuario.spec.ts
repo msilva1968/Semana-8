@@ -1,8 +1,9 @@
 import { describe, expect, it, jest } from '@jest/globals';
-import UsuarioService from '../../modulos/usuario/usuario.service.js';
+import { UsuarioService } from '../../modulos/usuario/usuario.service';
 
 describe('Testando o modelo Usuario', () => {
   const objetoUsuario = {
+    id: '',
     nome: 'Marcio Silva',
     email: 'msilva@teste.com',
     senha: 'abc0123',
