@@ -6,10 +6,7 @@ const routes = (app) => {
     res.status(200).send({ titulo: 'Curso de node Aula 8' });
   });
 
-  app.use(
-    express.json(),
-    usuarios,
-  );
+  app.use(express.json(), usuarios);
 };
 
 export default routes;
